@@ -1,0 +1,140 @@
+body {
+  background-color: black;
+  color: white;
+  font-family: Arial, sans-serif;
+  margin: 0;
+}
+
+h1 { text-align: center; font-size: 40px; letter-spacing: 3px; padding: 30px 20px 0; margin: 0; }
+
+/* Only the page with class "active" is shown */
+.page { display: none; }
+.page.active { display: block; }
+
+/* HOME HERO: the video fills the screen, the text sits on the right */
+.hero {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.hero video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 6%;
+  background: linear-gradient(to left, black 20%, transparent 100%);
+}
+
+.hero-overlay h1 {
+  text-align: left;
+  font-size: 44px;
+  padding: 0;
+  margin: 0 0 20px;
+}
+
+.hero-text h2 { color: orange; margin: 0 0 10px; }
+.hero-text p { line-height: 1.7; color: lightgray; }
+
+/* EXPLORE CARDS: small, side by side */
+.section-title { margin: 40px 30px 0; border-bottom: 1px solid dimgray; padding-bottom: 10px; }
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  padding: 30px;
+}
+
+.card {
+  flex: 1;
+  min-width: 110px;
+  padding: 18px 10px;
+  text-align: center;
+  border: 1px solid dimgray;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.card h3 { margin: 0; font-size: 16px; }
+.card:hover { border-color: orange; color: orange; }
+
+button {
+  background-color: black;
+  color: white;
+  border: 1px solid white;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+button:hover { background-color: orange; color: black; border-color: orange; }
+
+/* TOPIC PAGES */
+.page-head { padding: 30px 8% 10px; }
+.page-head h2 { font-size: 36px; margin: 25px 0 5px; }
+.page-head p { color: lightgray; margin: 0; }
+
+/* One block per planet; --c is that block's own color, set in the HTML */
+.item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+  min-height: 90vh;
+  padding: 40px 8%;
+  background: linear-gradient(160deg, black 35%, var(--c) 150%);
+}
+
+/* Every second block flips: image right, text left */
+article.item:nth-of-type(even) { flex-direction: row-reverse; }
+
+/* "lighten" makes the image's black background disappear into the block color */
+.planet-img {
+  width: 45%;
+  max-width: 480px;
+  mix-blend-mode: lighten;
+  -webkit-mask-image: radial-gradient(circle closest-side, black 97%, transparent 100%);
+  mask-image: radial-gradient(circle closest-side, black 97%, transparent 100%);
+}
+.planet-img.plain, .planet-img.wide { -webkit-mask-image: none; mask-image: none; }
+.planet-img.wide { max-width: 560px; mix-blend-mode: normal; border-radius: 8px; }
+
+.text { max-width: 460px; }
+.text h3 { font-size: 36px; margin: 0 0 15px; }
+.text p { line-height: 1.7; color: lightgray; }
+.text .facts { color: orange; font-size: 14px; }
+.text small { color: gray; }
+
+/* RETURN TO HOME button at the end of each topic page */
+.back-bar { text-align: center; padding: 40px 0; background: black; }
+.back-bar button { padding: 14px 40px; font-size: 16px; }
+
+footer { text-align: center; padding: 25px; color: gray; font-size: 13px; border-top: 1px solid dimgray; }
+
+/* Small screens: stack everything */
+@media (max-width: 800px) {
+  .hero-overlay {
+    width: 100%;
+    justify-content: flex-end;
+    padding: 0 6% 40px;
+    background: linear-gradient(to top, black 30%, transparent 100%);
+  }
+  .hero-overlay h1 { font-size: 30px; }
+  .item, article.item:nth-of-type(even) { flex-direction: column; gap: 25px; }
+  .planet-img { width: 80%; }
+}

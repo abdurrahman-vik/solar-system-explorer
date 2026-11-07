@@ -1,0 +1,343 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Solar System Explorer</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- HOME -->
+    <section id="home" class="page active">
+      <div class="hero">
+        <video
+          src="video/12275372-hd_1920_1028_60fps.mp4"
+          autoplay
+          muted
+          loop
+          playsinline
+        ></video>
+        <div class="hero-overlay">
+          <h1>Solar System Explorer</h1>
+          <div class="hero-text">
+            <h2>Our Place in the Universe</h2>
+            <p>
+              Our solar system sits inside the Milky Way galaxy, a spiral of
+              hundreds of billions of stars. At its center is the Sun. Around it
+              travel eight planets, dwarf planets, countless asteroids and icy
+              comets. Choose a topic to begin.
+            </p>
+          </div>
+        </div>
+      </div>
+      <h2 class="section-title">Explore</h2>
+      <div class="cards">
+        <div class="card" onclick="showPage('sun')"><h3>Sun</h3></div>
+        <div class="card" onclick="showPage('planets')"><h3>Planets</h3></div>
+        <div class="card" onclick="showPage('dwarf')">
+          <h3>Dwarf Planets</h3>
+        </div>
+        <div class="card" onclick="showPage('asteroids')">
+          <h3>Asteroids</h3>
+        </div>
+        <div class="card" onclick="showPage('comets')"><h3>Comets</h3></div>
+        <div class="card" onclick="showPage('milkyway')">
+          <h3>Milky Way</h3>
+        </div>
+      </div>
+    </section>
+
+    <!-- SUN -->
+    <section id="sun" class="page">
+      <header class="page-head">
+        <h2>The Sun</h2>
+        <p>The star that holds the solar system together.</p>
+      </header>
+      <article class="item" style="--c: orangered">
+        <img class="planet-img" src="images/sun.jpg" alt="The Sun" />
+        <div class="text">
+          <h3>Sun</h3>
+          <p>
+            The Sun is a star about 4.6 billion years old. It holds 99.8% of the
+            solar system's mass, and its gravity keeps every planet in orbit.
+            Its light takes about 8 minutes to reach Earth.
+          </p>
+          <p class="facts">
+            Diameter 1.39 million km | Surface 5,500 C | Core 15 million C
+          </p>
+          <small
+            >False-color image from NASA/SDO, colored to show solar
+            features.</small
+          >
+        </div>
+      </article>
+      <div class="back-bar">
+        <button onclick="showPage('home')">Return to Home</button>
+      </div>
+    </section>
+
+    <!-- PLANETS -->
+    <section id="planets" class="page">
+      <header class="page-head">
+        <h2>The Planets</h2>
+        <p>Scroll to travel outward from the Sun, from Mercury to Neptune.</p>
+      </header>
+      <article class="item" style="--c: dimgray">
+        <img class="planet-img" src="images/mercury.jpg" alt="Mercury" />
+        <div class="text">
+          <h3>Mercury</h3>
+          <p>
+            The smallest planet and the closest to the Sun. It has almost no
+            atmosphere, so temperatures swing from 430 C in the day to -180 C at
+            night.
+          </p>
+          <p class="facts">
+            Distance 57.9 million km | Year 88 days | Day 59 Earth days
+          </p>
+          <small>Mosaic of many spacecraft images.</small>
+        </div>
+      </article>
+      <article class="item" style="--c: darkgoldenrod">
+        <img class="planet-img" src="images/venus.jpg" alt="Venus" />
+        <div class="text">
+          <h3>Venus</h3>
+          <p>
+            The hottest planet, at about 465 C, because its thick carbon dioxide
+            atmosphere traps heat. It spins backwards, and one day lasts longer
+            than its year.
+          </p>
+          <p class="facts">
+            Distance 108.2 million km | Year 225 days | Day 243 Earth days
+          </p>
+          <small>Radar-based image, since clouds hide the surface.</small>
+        </div>
+      </article>
+      <article class="item" style="--c: midnightblue">
+        <img class="planet-img" src="images/earth.jpg" alt="Earth" />
+        <div class="text">
+          <h3>Earth</h3>
+          <p>
+            Our home and the only world known to support life. About 71% of its
+            surface is covered by water, and it has one natural satellite, the
+            Moon.
+          </p>
+          <p class="facts">
+            Distance 149.6 million km | Year 365.25 days | Day 24 hours
+          </p>
+          <small>Satellite composite with enhanced color.</small>
+        </div>
+      </article>
+      <article class="item" style="--c: maroon">
+        <img class="planet-img" src="images/mars.jpg" alt="Mars" />
+        <div class="text">
+          <h3>Mars</h3>
+          <p>
+            The Red Planet gets its color from iron oxide dust. It has two small
+            moons and Olympus Mons, a volcano about 22 km high, the tallest
+            known in the solar system.
+          </p>
+          <p class="facts">
+            Distance 227.9 million km | Year 687 days | Day 24.6 hours
+          </p>
+        </div>
+      </article>
+      <article class="item" style="--c: sienna">
+        <img class="planet-img" src="images/jupiter.jpg" alt="Jupiter" />
+        <div class="text">
+          <h3>Jupiter</h3>
+          <p>
+            The largest planet, a gas giant big enough to hold over 1,300
+            Earths. Its Great Red Spot is a storm wider than Earth that has
+            lasted for centuries.
+          </p>
+          <p class="facts">
+            Distance 778.5 million km | Year 12 Earth years | Day 9.9 hours
+          </p>
+        </div>
+      </article>
+      <article class="item" style="--c: olive">
+        <img class="planet-img plain" src="images/saturn.jpg" alt="Saturn" />
+        <div class="text">
+          <h3>Saturn</h3>
+          <p>
+            Famous for its rings of ice and rock. It is the least dense planet
+            and would float in water if a big enough ocean existed. It has a
+            very large family of moons.
+          </p>
+          <p class="facts">
+            Distance 1.43 billion km | Year 29.5 Earth years | Day 10.7 hours
+          </p>
+        </div>
+      </article>
+      <article class="item" style="--c: teal">
+        <img class="planet-img" src="images/uranus.jpg" alt="Uranus" />
+        <div class="text">
+          <h3>Uranus</h3>
+          <p>
+            An ice giant tilted about 98 degrees, so it rolls around the Sun on
+            its side. Methane in its atmosphere gives it a pale blue-green
+            color.
+          </p>
+          <p class="facts">
+            Distance 2.87 billion km | Year 84 Earth years | Day 17.2 hours
+          </p>
+        </div>
+      </article>
+      <article class="item" style="--c: navy">
+        <img class="planet-img" src="images/neptune.jpg" alt="Neptune" />
+        <div class="text">
+          <h3>Neptune</h3>
+          <p>
+            The most distant planet, with the fastest winds in the solar system,
+            reaching about 2,100 km/h. Its largest moon, Triton, orbits in the
+            opposite direction to the planet's spin.
+          </p>
+          <p class="facts">
+            Distance 4.5 billion km | Year 165 Earth years | Day 16.1 hours
+          </p>
+        </div>
+      </article>
+      <div class="back-bar">
+        <button onclick="showPage('home')">Return to Home</button>
+      </div>
+    </section>
+
+    <!-- DWARF PLANETS -->
+    <section id="dwarf" class="page">
+      <header class="page-head">
+        <h2>Dwarf Planets</h2>
+        <p>
+          Round worlds that orbit the Sun but have not cleared their orbital
+          path.
+        </p>
+      </header>
+      <article class="item" style="--c: dimgray">
+        <img class="planet-img" src="images/ceres.jpg" alt="Ceres" />
+        <div class="text">
+          <h3>Ceres</h3>
+          <p>
+            The largest object in the asteroid belt and the only dwarf planet in
+            the inner solar system. NASA's Dawn spacecraft found bright salt
+            deposits in its Occator crater.
+          </p>
+          <p class="facts">Diameter about 940 km | Year 4.6 Earth years</p>
+        </div>
+      </article>
+      <article class="item" style="--c: saddlebrown">
+        <img class="planet-img" src="images/pluto.jpg" alt="Pluto" />
+        <div class="text">
+          <h3>Pluto</h3>
+          <p>
+            Once the ninth planet, reclassified as a dwarf planet in 2006.
+            NASA's New Horizons flew past in 2015 and revealed a large
+            heart-shaped plain of nitrogen ice.
+          </p>
+          <p class="facts">Diameter about 2,377 km | Year 248 Earth years</p>
+        </div>
+      </article>
+      <div class="back-bar">
+        <button onclick="showPage('home')">Return to Home</button>
+      </div>
+    </section>
+
+    <!-- ASTEROIDS -->
+    <section id="asteroids" class="page">
+      <header class="page-head">
+        <h2>Asteroids</h2>
+        <p>
+          Rocky leftovers from the birth of the solar system, mostly between
+          Mars and Jupiter.
+        </p>
+      </header>
+      <article class="item" style="--c: darkslategray">
+        <img class="planet-img" src="images/asteroid vesta.jpg" alt="Vesta" />
+        <div class="text">
+          <h3>Vesta</h3>
+          <p>
+            One of the largest asteroids, about 525 km across. NASA's Dawn
+            spacecraft orbited it in 2011 and 2012 and mapped a huge crater at
+            its south pole.
+          </p>
+          <p class="facts">Orbit: main asteroid belt | Year 3.6 Earth years</p>
+        </div>
+      </article>
+      <article class="item" style="--c: dimgray">
+        <img class="planet-img" src="images/asteroid bennu.jpg" alt="Bennu" />
+        <div class="text">
+          <h3>Bennu</h3>
+          <p>
+            A small asteroid about 500 m wide, shaped like a spinning top.
+            NASA's OSIRIS-REx collected a sample from it and delivered it to
+            Earth in September 2023.
+          </p>
+          <p class="facts">Orbit: near Earth | Year 1.2 Earth years</p>
+        </div>
+      </article>
+      <div class="back-bar">
+        <button onclick="showPage('home')">Return to Home</button>
+      </div>
+    </section>
+
+    <!-- COMETS -->
+    <section id="comets" class="page">
+      <header class="page-head">
+        <h2>Comets</h2>
+        <p>Balls of ice and dust that grow glowing tails near the Sun.</p>
+      </header>
+      <article class="item" style="--c: slategray">
+        <img class="planet-img" src="images/comet 67p.jpg" alt="Comet 67P" />
+        <div class="text">
+          <h3>Comet 67P</h3>
+          <p>
+            Comet Churyumov-Gerasimenko has two joined lobes. The European
+            Rosetta spacecraft orbited it from 2014, and its lander Philae made
+            the first soft landing on a comet.
+          </p>
+          <p class="facts">Size about 4 km | Year 6.4 Earth years</p>
+          <small>Image: ESA/Rosetta.</small>
+        </div>
+      </article>
+      <div class="back-bar">
+        <button onclick="showPage('home')">Return to Home</button>
+      </div>
+    </section>
+
+    <!-- MILKY WAY -->
+    <section id="milkyway" class="page">
+      <header class="page-head">
+        <h2>The Milky Way</h2>
+        <p>The galaxy that contains our solar system.</p>
+      </header>
+      <article class="item" style="--c: midnightblue">
+        <img
+          class="planet-img wide"
+          src="images/milky way galaxy.jpg"
+          alt="The Milky Way"
+        />
+        <div class="text">
+          <h3>Our Galaxy</h3>
+          <p>
+            The Milky Way is a spiral galaxy about 100,000 light-years across,
+            with hundreds of billions of stars. Our Sun lies in one of its
+            spiral arms and takes about 230 million years to orbit the center.
+          </p>
+          <p class="facts">
+            Seen from Earth as a pale band of stars across the night sky
+          </p>
+        </div>
+      </article>
+      <div class="back-bar">
+        <button onclick="showPage('home')">Return to Home</button>
+      </div>
+    </section>
+
+    <footer>
+      <p>
+        Images: NASA, ESA and mission teams. The orbit animation on the home
+        page is a computer rendering and is not to scale.
+      </p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
