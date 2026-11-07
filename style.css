@@ -5,11 +5,21 @@ body {
   margin: 0;
 }
 
-h1 { text-align: center; font-size: 40px; letter-spacing: 3px; padding: 30px 20px 0; margin: 0; }
+h1 {
+  text-align: center;
+  font-size: 40px;
+  letter-spacing: 3px;
+  padding: 30px 20px 0;
+  margin: 0;
+}
 
 /* Only the page with class "active" is shown */
-.page { display: none; }
-.page.active { display: block; }
+.page {
+  display: none;
+}
+.page.active {
+  display: block;
+}
 
 /* HOME HERO: the video fills the screen, the text sits on the right */
 .hero {
@@ -48,11 +58,21 @@ h1 { text-align: center; font-size: 40px; letter-spacing: 3px; padding: 30px 20p
   margin: 0 0 20px;
 }
 
-.hero-text h2 { color: orange; margin: 0 0 10px; }
-.hero-text p { line-height: 1.7; color: lightgray; }
+.hero-text h2 {
+  color: orange;
+  margin: 0 0 10px;
+}
+.hero-text p {
+  line-height: 1.7;
+  color: lightgray;
+}
 
 /* EXPLORE CARDS: small, side by side */
-.section-title { margin: 40px 30px 0; border-bottom: 1px solid dimgray; padding-bottom: 10px; }
+.section-title {
+  margin: 40px 30px 0;
+  border-bottom: 1px solid dimgray;
+  padding-bottom: 10px;
+}
 
 .cards {
   display: flex;
@@ -71,8 +91,14 @@ h1 { text-align: center; font-size: 40px; letter-spacing: 3px; padding: 30px 20p
   cursor: pointer;
 }
 
-.card h3 { margin: 0; font-size: 16px; }
-.card:hover { border-color: orange; color: orange; }
+.card h3 {
+  margin: 0;
+  font-size: 16px;
+}
+.card:hover {
+  border-color: orange;
+  color: orange;
+}
 
 button {
   background-color: black;
@@ -82,12 +108,24 @@ button {
   border-radius: 4px;
   cursor: pointer;
 }
-button:hover { background-color: orange; color: black; border-color: orange; }
+button:hover {
+  background-color: orange;
+  color: black;
+  border-color: orange;
+}
 
 /* TOPIC PAGES */
-.page-head { padding: 30px 8% 10px; }
-.page-head h2 { font-size: 36px; margin: 25px 0 5px; }
-.page-head p { color: lightgray; margin: 0; }
+.page-head {
+  padding: 30px 8% 10px;
+}
+.page-head h2 {
+  font-size: 36px;
+  margin: 25px 0 5px;
+}
+.page-head p {
+  color: lightgray;
+  margin: 0;
+}
 
 /* One block per planet; --c is that block's own color, set in the HTML */
 .item {
@@ -101,30 +139,70 @@ button:hover { background-color: orange; color: black; border-color: orange; }
 }
 
 /* Every second block flips: image right, text left */
-article.item:nth-of-type(even) { flex-direction: row-reverse; }
+article.item:nth-of-type(even) {
+  flex-direction: row-reverse;
+}
 
 /* "lighten" makes the image's black background disappear into the block color */
 .planet-img {
   width: 45%;
   max-width: 480px;
   mix-blend-mode: lighten;
-  -webkit-mask-image: radial-gradient(circle closest-side, black 97%, transparent 100%);
+  -webkit-mask-image: radial-gradient(
+    circle closest-side,
+    black 97%,
+    transparent 100%
+  );
   mask-image: radial-gradient(circle closest-side, black 97%, transparent 100%);
 }
-.planet-img.plain, .planet-img.wide { -webkit-mask-image: none; mask-image: none; }
-.planet-img.wide { max-width: 560px; mix-blend-mode: normal; border-radius: 8px; }
+.planet-img.plain,
+.planet-img.wide {
+  -webkit-mask-image: none;
+  mask-image: none;
+}
+.planet-img.wide {
+  max-width: 560px;
+  mix-blend-mode: normal;
+  border-radius: 8px;
+}
 
-.text { max-width: 460px; }
-.text h3 { font-size: 36px; margin: 0 0 15px; }
-.text p { line-height: 1.7; color: lightgray; }
-.text .facts { color: orange; font-size: 14px; }
-.text small { color: gray; }
+.text {
+  max-width: 460px;
+}
+.text h3 {
+  font-size: 36px;
+  margin: 0 0 15px;
+}
+.text p {
+  line-height: 1.7;
+  color: lightgray;
+}
+.text .facts {
+  color: orange;
+  font-size: 14px;
+}
+.text small {
+  color: gray;
+}
 
 /* RETURN TO HOME button at the end of each topic page */
-.back-bar { text-align: center; padding: 40px 0; background: black; }
-.back-bar button { padding: 14px 40px; font-size: 16px; }
+.back-bar {
+  text-align: center;
+  padding: 40px 0;
+  background: black;
+}
+.back-bar button {
+  padding: 14px 40px;
+  font-size: 16px;
+}
 
-footer { text-align: center; padding: 25px; color: gray; font-size: 13px; border-top: 1px solid dimgray; }
+footer {
+  text-align: center;
+  padding: 25px;
+  color: gray;
+  font-size: 13px;
+  border-top: 1px solid dimgray;
+}
 
 /* Small screens: stack everything */
 @media (max-width: 800px) {
@@ -134,7 +212,32 @@ footer { text-align: center; padding: 25px; color: gray; font-size: 13px; border
     padding: 0 6% 40px;
     background: linear-gradient(to top, black 30%, transparent 100%);
   }
-  .hero-overlay h1 { font-size: 30px; }
-  .item, article.item:nth-of-type(even) { flex-direction: column; gap: 25px; }
-  .planet-img { width: 80%; }
+  .hero-overlay h1 {
+    font-size: 30px;
+  }
+  .item,
+  article.item:nth-of-type(even) {
+    flex-direction: column;
+    gap: 25px;
+  }
+  .planet-img {
+    width: 80%;
+  }
+}
+#homeArrow {
+  display: none;
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 10;
+  font-size: 22px;
+  padding: 6px 16px;
+}
+
+#topBtn {
+  display: none;
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  z-index: 10;
 }
