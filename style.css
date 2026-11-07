@@ -186,15 +186,6 @@ article.item:nth-of-type(even) {
 }
 
 /* RETURN TO HOME button at the end of each topic page */
-.back-bar {
-  text-align: center;
-  padding: 40px 0;
-  background: black;
-}
-.back-bar button {
-  padding: 14px 40px;
-  font-size: 16px;
-}
 
 footer {
   text-align: center;
@@ -240,4 +231,17 @@ footer {
   bottom: 25px;
   right: 25px;
   z-index: 10;
+}
+#homeArrow {
+  display: none;
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 10;
+  width: 72px;
+  height: 44px;
+  padding: 0;
+  font-size: 26px;
+  line-height: 1;
+  border-radius: 22px;
 }
